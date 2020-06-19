@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>Stencil Component Starter</title>
 
-  <script type="module" src="/build/frame-ds.esm.js"></script>
-  <script nomodule src="/build/frame-ds.js"></script>
+    <script type="module" src="/build/frame-ds.esm.js"></script>
+    <script nomodule src="/build/frame-ds.js"></script>
 
-</head>
-<body>
-
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-  <frame-button>button test</frame-button>
-
-</body>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="card-deck">
+          <frame-card>
+          <frame-card-body>
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </frame-card-body>
+          <frame-card-footer>
+            <frame-button>button test</frame-button>
+          </frame-card-footer>
+        </frame-card>
+          <frame-card>
+          <frame-card-body>
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </frame-card-body>
+          <frame-card-footer>
+            <frame-button>button test</frame-button>
+          </frame-card-footer>
+        </frame-card>
+          <frame-card>
+          <frame-card-body>
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </frame-card-body>
+          <frame-card-footer>
+            <frame-button>button test</frame-button>
+          </frame-card-footer>
+        </frame-card>
+      </div>
+  </body>
 </html>

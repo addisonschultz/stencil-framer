@@ -1,0 +1,6 @@
+@import "../../assets/bootstrap.css";
+
+:host {
+  display: block;
+  max-width: 500px;
+}

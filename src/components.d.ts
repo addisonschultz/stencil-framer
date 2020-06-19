@@ -6,7 +6,21 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface CardDeck {
+    }
     interface FrameButton {
+    }
+    interface FrameCard {
+    }
+    interface FrameCardBody {
+    }
+    interface FrameCardFooter {
+    }
+    interface FrameCardHeader {
+    }
+    interface FrameCardImage {
+        "alt": string;
+        "image": string;
     }
     interface MyComponent {
         /**
@@ -24,11 +38,47 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCardDeckElement extends Components.CardDeck, HTMLStencilElement {
+    }
+    var HTMLCardDeckElement: {
+        prototype: HTMLCardDeckElement;
+        new (): HTMLCardDeckElement;
+    };
     interface HTMLFrameButtonElement extends Components.FrameButton, HTMLStencilElement {
     }
     var HTMLFrameButtonElement: {
         prototype: HTMLFrameButtonElement;
         new (): HTMLFrameButtonElement;
+    };
+    interface HTMLFrameCardElement extends Components.FrameCard, HTMLStencilElement {
+    }
+    var HTMLFrameCardElement: {
+        prototype: HTMLFrameCardElement;
+        new (): HTMLFrameCardElement;
+    };
+    interface HTMLFrameCardBodyElement extends Components.FrameCardBody, HTMLStencilElement {
+    }
+    var HTMLFrameCardBodyElement: {
+        prototype: HTMLFrameCardBodyElement;
+        new (): HTMLFrameCardBodyElement;
+    };
+    interface HTMLFrameCardFooterElement extends Components.FrameCardFooter, HTMLStencilElement {
+    }
+    var HTMLFrameCardFooterElement: {
+        prototype: HTMLFrameCardFooterElement;
+        new (): HTMLFrameCardFooterElement;
+    };
+    interface HTMLFrameCardHeaderElement extends Components.FrameCardHeader, HTMLStencilElement {
+    }
+    var HTMLFrameCardHeaderElement: {
+        prototype: HTMLFrameCardHeaderElement;
+        new (): HTMLFrameCardHeaderElement;
+    };
+    interface HTMLFrameCardImageElement extends Components.FrameCardImage, HTMLStencilElement {
+    }
+    var HTMLFrameCardImageElement: {
+        prototype: HTMLFrameCardImageElement;
+        new (): HTMLFrameCardImageElement;
     };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -37,12 +87,32 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "card-deck": HTMLCardDeckElement;
         "frame-button": HTMLFrameButtonElement;
+        "frame-card": HTMLFrameCardElement;
+        "frame-card-body": HTMLFrameCardBodyElement;
+        "frame-card-footer": HTMLFrameCardFooterElement;
+        "frame-card-header": HTMLFrameCardHeaderElement;
+        "frame-card-image": HTMLFrameCardImageElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface CardDeck {
+    }
     interface FrameButton {
+    }
+    interface FrameCard {
+    }
+    interface FrameCardBody {
+    }
+    interface FrameCardFooter {
+    }
+    interface FrameCardHeader {
+    }
+    interface FrameCardImage {
+        "alt"?: string;
+        "image"?: string;
     }
     interface MyComponent {
         /**
@@ -59,7 +129,13 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "card-deck": CardDeck;
         "frame-button": FrameButton;
+        "frame-card": FrameCard;
+        "frame-card-body": FrameCardBody;
+        "frame-card-footer": FrameCardFooter;
+        "frame-card-header": FrameCardHeader;
+        "frame-card-image": FrameCardImage;
         "my-component": MyComponent;
     }
 }
@@ -67,7 +143,13 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "card-deck": LocalJSX.CardDeck & JSXBase.HTMLAttributes<HTMLCardDeckElement>;
             "frame-button": LocalJSX.FrameButton & JSXBase.HTMLAttributes<HTMLFrameButtonElement>;
+            "frame-card": LocalJSX.FrameCard & JSXBase.HTMLAttributes<HTMLFrameCardElement>;
+            "frame-card-body": LocalJSX.FrameCardBody & JSXBase.HTMLAttributes<HTMLFrameCardBodyElement>;
+            "frame-card-footer": LocalJSX.FrameCardFooter & JSXBase.HTMLAttributes<HTMLFrameCardFooterElement>;
+            "frame-card-header": LocalJSX.FrameCardHeader & JSXBase.HTMLAttributes<HTMLFrameCardHeaderElement>;
+            "frame-card-image": LocalJSX.FrameCardImage & JSXBase.HTMLAttributes<HTMLFrameCardImageElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

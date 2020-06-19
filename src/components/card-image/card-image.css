@@ -1,0 +1,4 @@
+@import "../../assets/bootstrap.css";
+:host {
+  display: block;
+}
