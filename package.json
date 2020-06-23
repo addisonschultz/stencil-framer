@@ -1,18 +1,19 @@
 {
   "name": "frame-ds",
-  "version": "0.0.1",
+  "version": "0.0.1--dev-c",
   "description": "Stencil Component Starter",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "es2015": "dist/esm/index.mjs",
-  "es2017": "dist/esm/index.mjs",
-  "types": "dist/types/index.d.ts",
-  "collection": "dist/collection/collection-manifest.json",
-  "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/frame-ds/frame-ds.js",
+  "main": "generated/frame/dist/index.js",
+  "module": "generated/frame/dist/index.mjs",
+  "es2015": "generated/frame/dist/esm/index.mjs",
+  "es2017": "generated/frame/dist/esm/index.mjs",
+  "types": "generated/frame/dist/types/index.d.ts",
+  "collection": "generated/frame/dist/collection/collection-manifest.json",
+  "collection:main": "generated/frame/dist/collection/index.js",
+  "unpkg": "generated/frame/dist/frame-ds/frame-ds.js",
   "files": [
-    "dist/",
-    "loader/"
+    "generated/frame/dist/",
+    "generated/frame/dist/loader",
+    "generated/frame-react"
   ],
   "scripts": {
     "build": "stencil build --docs",
@@ -21,12 +22,20 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
   },
+  "repository": {},
   "devDependencies": {
     "@stencil/core": "^1.12.2",
     "@stencil/react-output-target": "0.0.6"
   },
   "license": "MIT",
   "dependencies": {
-    "@stencil/sass": "^1.3.1"
+    "@stencil/sass": "^1.3.1",
+    "deps": "^0.1.2",
+    "peer": "^0.5.3",
+    "react": "^16.13.1"
+  },
+  "peerDependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   }
 }
